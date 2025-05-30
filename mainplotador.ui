@@ -253,9 +253,9 @@
       <widget class="QWidget" name="">
        <property name="geometry">
         <rect>
-         <x>8</x>
-         <y>390</y>
-         <width>173</width>
+         <x>10</x>
+         <y>380</y>
+         <width>181</width>
          <height>36</height>
         </rect>
        </property>
@@ -264,6 +264,9 @@
          <number>10</number>
         </property>
         <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
          <number>10</number>
         </property>
         <item>
@@ -275,12 +278,15 @@
            <string>Expoente dos limites</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QSpinBox" name="spinExpoente">
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
           <property name="minimum">
            <number>-9</number>
           </property>
