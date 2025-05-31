@@ -2,7 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17
+CONFIG += c++14
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -10,14 +10,17 @@ CONFIG += c++17
 
 SOURCES += \
     evaluator.cpp \
+    lehfuncao.cpp \
     main.cpp \
     mainplotador.cpp
 
 HEADERS += \
     evaluator.h \
+    lehfuncao.h \
     mainplotador.h
 
 FORMS += \
+    lehfuncao.ui \
     mainplotador.ui
 
 # Default rules for deployment.

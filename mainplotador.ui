@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="grafico">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -63,10 +63,10 @@
       <widget class="QWidget" name="verticalLayoutWidget">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>160</width>
-         <height>221</height>
+         <x>0</x>
+         <y>0</y>
+         <width>191</width>
+         <height>231</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="layoutFuncao">
@@ -90,7 +90,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPlainTextEdit" name="plainTextEdit">
+         <widget class="QPlainTextEdit" name="textoFuncao">
           <property name="readOnly">
            <bool>true</bool>
           </property>
@@ -98,24 +98,11 @@
         </item>
        </layout>
       </widget>
-      <widget class="Line" name="line1">
-       <property name="geometry">
-        <rect>
-         <x>17</x>
-         <y>240</y>
-         <width>161</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-      </widget>
       <widget class="QWidget" name="gridLayoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>250</y>
+         <y>220</y>
          <width>179</width>
          <height>125</height>
         </rect>
@@ -146,7 +133,7 @@
            <string>LIMITES</string>
           </property>
           <property name="textFormat">
-           <enum>Qt::TextFormat::AutoText</enum>
+           <enum>Qt::TextFormat::PlainText</enum>
           </property>
           <property name="alignment">
            <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -237,29 +224,16 @@
         </item>
        </layout>
       </widget>
-      <widget class="Line" name="line2">
-       <property name="geometry">
-        <rect>
-         <x>17</x>
-         <y>440</y>
-         <width>161</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-      </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>380</y>
+         <y>360</y>
          <width>181</width>
          <height>36</height>
         </rect>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <layout class="QHBoxLayout" name="layoutExpoente">
         <property name="leftMargin">
          <number>10</number>
         </property>
@@ -277,21 +251,134 @@
           <property name="text">
            <string>Expoente dos limites</string>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-          </property>
          </widget>
         </item>
         <item>
          <widget class="QSpinBox" name="spinExpoente">
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-          </property>
           <property name="minimum">
            <number>-9</number>
           </property>
           <property name="maximum">
            <number>9</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>410</y>
+         <width>204</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridCores">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QRadioButton" name="radioVermelho">
+          <property name="styleSheet">
+           <string notr="true">color:rgb(255, 0, 0)</string>
+          </property>
+          <property name="text">
+           <string>Verm</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QRadioButton" name="radioAzul">
+          <property name="styleSheet">
+           <string notr="true">color:rgb(0, 0, 255)</string>
+          </property>
+          <property name="text">
+           <string>Azul</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="radioVerde">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>Verd</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="Line" name="line3">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>460</y>
+         <width>180</width>
+         <height>3</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line2">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>400</y>
+         <width>180</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line1">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>240</y>
+         <width>180</width>
+         <height>3</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>470</y>
+         <width>168</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="layoutBotoes">
+        <item>
+         <widget class="QPushButton" name="pushPlotar">
+          <property name="text">
+           <string>PLOTAR</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushApagar">
+          <property name="text">
+           <string>APAGAR</string>
           </property>
          </widget>
         </item>
@@ -310,8 +397,39 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPlotagem">
+    <property name="title">
+     <string>Plotagem</string>
+    </property>
+    <addaction name="actionFun_o"/>
+    <addaction name="actionPlotar"/>
+    <addaction name="actionApagar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <addaction name="menuPlotagem"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFun_o">
+   <property name="text">
+    <string>Função</string>
+   </property>
+  </action>
+  <action name="actionPlotar">
+   <property name="text">
+    <string>Plotar</string>
+   </property>
+  </action>
+  <action name="actionApagar">
+   <property name="text">
+    <string>Apagar</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
