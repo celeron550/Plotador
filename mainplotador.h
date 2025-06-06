@@ -1,7 +1,7 @@
 #ifndef MAINPLOTADOR_H
 #define MAINPLOTADOR_H
 
-#include "evaluator.h"
+#include "grafico.h"
 #include "lehfuncao.h"
 #include <QMainWindow>
 
@@ -50,18 +50,11 @@ private slots:
 
     void slotDefinirFuncao(QString &funcao);
 
+    void slotGraficoClicked(double X, double Y);
+
 private:
     Ui::MainPlotador *ui;
-    double convXtoJ(double X);
-    double convYtoI(double Y);
-    double convJtoX(double J);
-    double convItoY(double I);
     LehFuncao *lehFuncao;
-    Evaluator eval;
-    QPixmap img;
-    QColor cor;
-    int largura, altura;
-    double minX,maxX,minY,maxY;
-    int nMarcX,nMarcY;
+    Grafico* grafico;
 };
 #endif // MAINPLOTADOR_H
