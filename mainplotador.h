@@ -16,7 +16,7 @@ class MainPlotador : public QMainWindow
     Q_OBJECT
 
 public:
-    MainPlotador(QWidget *parent = nullptr);
+    explicit MainPlotador(QWidget *parent = nullptr);
     ~MainPlotador();
 
 private slots:
@@ -36,7 +36,7 @@ private slots:
 
     void on_spinMaxY_valueChanged(int arg1);
 
-    void on_spinExpoente_valueChanged(int arg1);
+    void on_spinExpoente_valueChanged(int);
 
     void on_radioAzul_clicked();
 
@@ -48,7 +48,7 @@ private slots:
 
     void on_pushApagar_clicked();
 
-    void slotDefinirFuncao(QString &funcao);
+    void slotDefinirFuncao(const QString &funcao);
 
     void slotGraficoClicked(double X, double Y);
 

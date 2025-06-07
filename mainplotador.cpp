@@ -96,9 +96,10 @@ void MainPlotador::on_spinMaxX_valueChanged(int arg1)
         ui->spinExpoente->value()
         );
 
-    on_pushApagar_clicked();
+    ui->spinMinX->setMaximum(arg1 - 1);
 
     on_pushApagar_clicked();
+
 }
 
 
@@ -128,11 +129,13 @@ void MainPlotador::on_spinMaxY_valueChanged(int arg1)
         ui->spinExpoente->value()
         );
 
+    ui->spinMinY->setMaximum(arg1 - 1);
+
     on_pushApagar_clicked();
 }
 
 
-void MainPlotador::on_spinExpoente_valueChanged(int arg1)
+void MainPlotador::on_spinExpoente_valueChanged(int)
 {
     grafico->setLimites(
         ui->spinMinX->value(),
@@ -182,7 +185,7 @@ void MainPlotador::on_pushApagar_clicked()
 
 }
 
-void MainPlotador::slotDefinirFuncao(QString &funcao)
+void MainPlotador::slotDefinirFuncao(const QString &funcao)
 {
     std::string func = funcao.toStdString();
     try {

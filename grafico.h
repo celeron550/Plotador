@@ -8,7 +8,7 @@ class Grafico : public QLabel
 {
     Q_OBJECT
 public:
-    Grafico(QWidget *parent = nullptr);
+    explicit Grafico(QWidget *parent = nullptr);
     bool empty();
     void setLimites(int MinX, int MaxX, int MinY, int MaxY, int Expoente);
     void setFuncao(const std::string& S);
@@ -17,10 +17,10 @@ public:
     void apagar();
     void plotar();
 private:
-    double convXtoJ(double X);
-    double convYtoI(double Y);
-    double convJtoX(double J);
-    double convItoY(double I);
+    double convXtoJ(double X) const;
+    double convYtoI(double Y) const;
+    double convJtoX(double J) const;
+    double convItoY(double I) const;
     void mouseReleaseEvent(QMouseEvent *event) override;
     Evaluator eval;
     QPixmap img;

@@ -120,22 +120,22 @@ void Grafico::plotar()
     setPixmap(img);
 }
 
-double Grafico::convXtoJ(double X)
+double Grafico::convXtoJ(double X) const
 {
     return (largura - 1) * (X - minX) / (maxX-minX);
 }
 
-double Grafico::convYtoI(double Y)
+double Grafico::convYtoI(double Y) const
 {
     return (altura-1) * (maxY-Y) / (maxY-minY);
 }
 
-double Grafico::convJtoX(double J)
+double Grafico::convJtoX(double J) const
 {
     return minX + (maxX-minX)*J / (largura-1);
 }
 
-double Grafico::convItoY(double I)
+double Grafico::convItoY(double I) const
 {
     return maxY - (maxY-minY) * I / (altura-1);
 }

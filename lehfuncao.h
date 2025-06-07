@@ -19,7 +19,7 @@ private slots:
     void on_buttonBox_accepted();
 
 signals:
-    void signDefinirFuncao(QString &funcao);
+    void signDefinirFuncao(const QString &funcao);
 
 private:
     Ui::LehFuncao *ui;
