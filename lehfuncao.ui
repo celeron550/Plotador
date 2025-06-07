@@ -32,11 +32,11 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>21</x>
-     <y>71</y>
+     <y>50</y>
      <width>351</width>
      <height>26</height>
     </rect>

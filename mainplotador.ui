@@ -387,7 +387,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionFun_o">
    <property name="text">
-    <string>Função</string>
+    <string>Função...</string>
    </property>
   </action>
   <action name="actionPlotar">
