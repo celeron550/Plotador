@@ -65,32 +65,33 @@ void Grafico::apagar()
     pen.setWidth(3);
     painter.setPen(pen);
 
-    int Izero = convYtoI(0.0);
+    double Izero = convYtoI(0.0);
     if (Izero >=0 && Izero < altura)
     {
-        QLineF linhaX(0.0, (double)Izero, (double)(largura - 1), (double)Izero);
+        QLineF linhaX(0.0, Izero, (double)(largura - 1), Izero);
         painter.drawLine(linhaX);
         for (int i = 0; i < nMarcX; ++i)
         {
-            int Jmarc = convXtoJ(minX + (maxX - minX) * i / (nMarcX - 1));
+            double Jmarc = convXtoJ(minX + (maxX - minX) * i / (nMarcX - 1));
             QLineF marcaX(Jmarc, Izero - 3.0, Jmarc, Izero + 3.0);
             painter.drawLine(marcaX);
         }
     }
 
-    int Jzero = convXtoJ(0.0);
+    double Jzero = convXtoJ(0.0);
     if (Jzero >=0 && Jzero < largura)
     {
         QLineF eixoY(Jzero, 0.0, Jzero, (double)(altura - 1));
         painter.drawLine(eixoY);
         for (int i = 0; i < nMarcX; ++i)
         {
-            int Imarc = convYtoI(minY + (maxY - minY) * i / (nMarcY - 1));
+            double Imarc = convYtoI(minY + (maxY - minY) * i / (nMarcY - 1));
             QLineF marcaY(Jzero - 3.0, Imarc, Jzero + 3.0, Imarc);
             painter.drawLine(marcaY);
         }
     }
 
+    painter.end();
     setPixmap(img);
 }
 
@@ -116,7 +117,7 @@ void Grafico::plotar()
         }
         Iant = I;
     }
-
+    painter.end();
     setPixmap(img);
 }
 
